@@ -167,6 +167,6 @@ This project is distributed under the same license as the original MCP-Kali-Serv
 
 ## 🙏 Acknowledgements
 
-- Original concept and implementation by [Yousof Nahya](https://github.com/Wh0am123) via [MCP-Kali-Server](https://github.com/Wh0am123/MCP-Kali-Server)
+- Thanks to [Yousof Nahya](https://github.com/Wh0am123) via [MCP-Kali-Server](https://github.com/Wh0am123/MCP-Kali-Server)
 - Interactive shell implementation and enhancements added to support additional use cases
 - Special thanks to the Kali Linux team for their amazing security distribution
