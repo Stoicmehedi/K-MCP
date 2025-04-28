@@ -1,4 +1,4 @@
-# K-MCP: Kali Multi-agent Collaboration Protocol Server
+# K-MCP: Kali Model Context Protocol Server
 K-MCP is a powerful API bridge that connects AI assistants (like Claude, GPT, etc.) to a Kali Linux terminal, enabling AI-driven penetration testing, CTF solving, and security research.
 
 ## 🔍 Overview
