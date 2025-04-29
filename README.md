@@ -163,7 +163,7 @@ K-MCP is intended solely for educational and authorized testing purposes. Any mi
 
 ## 📄 License
 
-This project is distributed under the same license as the original MCP-Kali-Server. See the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgements
 
