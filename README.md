@@ -47,33 +47,38 @@ pip install -r requirements.txt
 python3 kali_server.py
 ```
 
-### Optional: On Your Client Machine [ To check the tool is working or not ] (Windows/Linux/Mac)
+### 2: On Your Client Machine (Windows/Linux/Mac)
 
 ```bash
 # Navigate to project directory
 cd K-MCP
 
-# Run the MCP client, connecting to your Kali server
-python3 mcp_server.py http://KALI_IP:5000
+#Edit the mcp_server.py file and change the ip
+DEFAULT_KALI_SERVER = "http://192.168.200.120:5000" # change to your linux IP
+
+# Run the MCP client, checking connectionto to your Kali server ( test purposes only ).You don't need to keep running this file.
+python mcp_server.py
+ 
 ```
 
-### 2. Configure Claude Desktop
+### 3. Configure Claude Desktop
 
 Edit `C:\Users\USERNAME\AppData\Roaming\Claude\claude_desktop_config.json`:
 
 ```json
 {
     "mcpServers": {
-        "k_mcp": {
-            "command": "python3",
+        "kali_mcp": {
+            "command": "python",
             "args": [
-                "/absolute/path/to/mcp_server.py",
-                "http://KALI_IP:5000"
+                "E:\\My MCP Project\\V1\\MCP-Kali-Server\\mcp_server.py"
             ]
         }
     }
 }
 ```
+
+### 4: Run the claude desktop 
 
 ## 💻 Usage Examples
 
