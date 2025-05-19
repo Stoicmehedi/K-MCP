@@ -40,6 +40,9 @@ git clone https://github.com/YOUR-USERNAME/K-MCP.git
 # Navigate to project directory
 cd K-MCP
 
+#Install necessary dependencies
+pip install -r requirements.txt
+
 # Start the Kali server
 python3 kali_server.py
 ```
