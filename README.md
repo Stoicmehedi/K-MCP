@@ -54,7 +54,7 @@ python3 kali_server.py
 cd K-MCP
 
 #Edit the mcp_server.py file and change the ip
-DEFAULT_KALI_SERVER = "http://192.168.200.120:5000" # change to your linux IP
+DEFAULT_KALI_SERVER = "http://XXX.XXX.XX.XX:5000" # change to your linux IP
 
 # Run the MCP client, checking connectionto to your Kali server ( test purposes only ).You don't need to keep running this file.
 python mcp_server.py
