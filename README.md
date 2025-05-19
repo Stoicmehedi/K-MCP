@@ -139,6 +139,68 @@ evil_winrm_connect(
     password="Password123!"
 )
 ```
+### Example Conversations with Claude
+### 1. Basic Network Reconnaissance
+```
+User: Can you help me scan the target 192.168.1.100?
+
+Claude: I'll help you perform a basic network reconnaissance. Let's start with a quick port scan to identify open services.
+
+[Claude executes nmap_scan]
+nmap_scan(
+    target="192.168.1.100",
+    scan_type="-sV",
+    ports="1-1000",
+    additional_args="-T4"
+)
+
+[After receiving results]
+I see several open ports. Let's check the web server on port 80 in more detail.
+
+[Claude executes gobuster_scan]
+gobuster_scan(
+    url="http://192.168.1.100",
+    mode="dir",
+    wordlist="/usr/share/wordlists/dirb/common.txt",
+    additional_args="-x php,html,txt"
+)
+```
+
+### 2. Web Application Testing
+```
+User: I found a login page at http://192.168.1.100/login.php. Can you help test it?
+
+Claude: I'll help you test the login page for common vulnerabilities. Let's start with SQL injection testing.
+
+[Claude executes sqlmap_scan]
+sqlmap_scan(
+    url="http://192.168.1.100/login.php",
+    data="username=admin&password=test",
+    additional_args="--batch --level=5 --risk=3"
+)
+
+[After receiving results]
+I see some potential SQL injection points. Let's also check for common directories that might reveal more information.
+
+[Claude executes nikto_scan]
+nikto_scan(
+    target="http://192.168.1.100",
+    additional_args="-h"
+)
+```
+
+### 3. Windows Machine Enumeration
+```
+User: I found a Windows machine at 192.168.1.100. Can you help enumerate it?
+
+Claude: I'll help you enumerate the Windows machine using multiple tools. Let's start with a basic Windows enumeration.
+
+[Claude executes enum4linux_scan]
+enum4linux_scan(
+    target="192.168.1.100",
+    additional_args="-a"
+)
+```
 
 ## 🔐 Security Considerations
 
