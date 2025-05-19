@@ -53,6 +53,9 @@ python3 kali_server.py
 # Navigate to project directory
 cd K-MCP
 
+#Install necessary dependencies
+pip install -r requirements.txt
+
 #Edit the mcp_server.py file and change the ip
 DEFAULT_KALI_SERVER = "http://XXX.XXX.XX.XX:5000" # change to your linux IP
 
