@@ -1,0 +1,5 @@
+# Core dependencies
+flask>=2.0.1
+requests>=2.26.0
+typing-extensions>=4.0.0
+python-pty>=0.1.0
