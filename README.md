@@ -83,62 +83,6 @@ Edit `C:\Users\USERNAME\AppData\Roaming\Claude\claude_desktop_config.json`:
 
 ### 4: Run the claude desktop 
 
-## 💻 Usage Examples
-
-### Running Security Tools
-
-K-MCP lets your AI execute any Kali Linux tool directly:
-
-```
-execute_command("nmap -sV -p- 10.10.10.10")
-execute_command("gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt")
-execute_command("sqlmap -u 'http://target.com/page.php?id=1' --dbs")
-```
-
-### Working with Interactive Tools
-
-Interactive tools are automatically detected and handled:
-
-```
-execute_command("ssh user@10.10.10.10")
-execute_command("evil-winrm -i 10.129.27.195 -u htb-student -p 'Password123!'")
-execute_command("mysql -u root -p")
-```
-
-The system will:
-1. Recognize these as interactive commands
-2. Create a persistent session
-3. Return a session ID for further interaction
-
-### Interactive Session Management
-
-Once a session is created:
-
-```
-# Send a command to the session
-interactive_send(session_id="your-session-id", command="whoami")
-
-# Read output without sending a command
-interactive_read(session_id="your-session-id")
-
-# Close the session when done
-interactive_close(session_id="your-session-id")
-
-# List all active sessions
-list_active_sessions()
-```
-
-### Using Evil-WinRM Helper
-
-For convenience with Evil-WinRM:
-
-```
-evil_winrm_connect(
-    ip="10.129.27.195", 
-    username="htb-student", 
-    password="Password123!"
-)
-```
 ### Example Conversations with Claude
 ### 1. Basic Network Reconnaissance
 ```
@@ -202,6 +146,62 @@ enum4linux_scan(
 )
 ```
 
+## 💻 Usage Examples
+
+### Running Security Tools
+
+K-MCP lets your AI execute any Kali Linux tool directly:
+
+```
+execute_command("nmap -sV -p- 10.10.10.10")
+execute_command("gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt")
+execute_command("sqlmap -u 'http://target.com/page.php?id=1' --dbs")
+```
+
+### Working with Interactive Tools
+
+Interactive tools are automatically detected and handled:
+
+```
+execute_command("ssh user@10.10.10.10")
+execute_command("evil-winrm -i 10.129.27.195 -u htb-student -p 'Password123!'")
+execute_command("mysql -u root -p")
+```
+
+The system will:
+1. Recognize these as interactive commands
+2. Create a persistent session
+3. Return a session ID for further interaction
+
+### Interactive Session Management
+
+Once a session is created:
+
+```
+# Send a command to the session
+interactive_send(session_id="your-session-id", command="whoami")
+
+# Read output without sending a command
+interactive_read(session_id="your-session-id")
+
+# Close the session when done
+interactive_close(session_id="your-session-id")
+
+# List all active sessions
+list_active_sessions()
+```
+
+### Using Evil-WinRM Helper
+
+For convenience with Evil-WinRM:
+
+```
+evil_winrm_connect(
+    ip="10.129.27.195", 
+    username="htb-student", 
+    password="Password123!"
+)
+```
 ## 🔐 Security Considerations
 
 - This tool enables remote command execution on your system
