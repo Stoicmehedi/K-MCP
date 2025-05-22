@@ -74,7 +74,7 @@ Edit `C:\Users\USERNAME\AppData\Roaming\Claude\claude_desktop_config.json`:
         "kali_mcp": {
             "command": "python",
             "args": [
-                "E:\\My MCP Project\\V1\\MCP-Kali-Server\\mcp_server.py"
+                "E:\\Paste_your_path_to_code\\mcp_server.py"
             ]
         }
     }
