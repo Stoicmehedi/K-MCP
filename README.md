@@ -239,7 +239,4 @@ K-MCP is intended solely for educational and authorized testing purposes. Any mi
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgements
-
-- Thanks to [Yousof Nahya](https://github.com/Wh0am123) via [MCP-Kali-Server](https://github.com/Wh0am123/MCP-Kali-Server)
-- Interactive shell implementation and enhancements added to support additional use cases
 - Special thanks to the Kali Linux team for their amazing security distribution
